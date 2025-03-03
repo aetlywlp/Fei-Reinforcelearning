@@ -6,7 +6,7 @@ This GitHub repository is created for practice to get started with reinforcement
 By using it, I can train a quadruped robot dog (although it looks quite clumsy).
 - REINFORCE(An early policy gradient algorithm, the principle of which is to maximize the Monte Carlo mean)
 By using it ,I can trian a Inverted Pendulum.
-### reinforcement_learning_by_dennybritz
+### [reinforcement_learning_by_dennybritz](https://github.com/dennybritz/reinforcement-learning)
 - MDPs and bella equations
 - 
 
