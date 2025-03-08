@@ -80,6 +80,5 @@ PY_PROJECT/
 - 创建智能体类：继承BaseAgent并实现算法逻辑
 - 创建配置文件：定义算法超参数
 - 创建运行脚本：设置训练和评估流程
-- MDPs and bella equations
-- 
+
 
