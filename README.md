@@ -43,6 +43,8 @@ PY_PROJECT/
 │   ├── dqn_config.yaml    # DQN超参数
 │   └── ppo_config.yaml    # PPO超参数
 └── train.py               # 训练入口脚本
+└──jupyter               # 迁移进入的jupyter类文件，比较独立
+└── paper               # 阅读前沿论文
 │
 ├── requirements.txt              # 项目依赖
 ├── setup.py                      # 安装脚本
@@ -74,6 +76,10 @@ PY_PROJECT/
                                                                          | (memory/*)         |
                                                                          +--------------------+
 ```
+### code思路
+- 创建智能体类：继承BaseAgent并实现算法逻辑
+- 创建配置文件：定义算法超参数
+- 创建运行脚本：设置训练和评估流程
 - MDPs and bella equations
 - 
 
