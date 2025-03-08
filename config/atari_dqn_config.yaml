@@ -1,0 +1,20 @@
+# Atari DQN配置
+algorithm: "dqn"
+env_id: "ALE/Breakout-v5"
+env_type: "atari"  # 新添加的标识符
+
+# 环境参数
+frame_stack: 4
+clip_rewards: true
+
+# 算法参数
+gamma: 0.99
+learning_rate: 0.0001
+batch_size: 32
+buffer_size: 100000
+target_update_frequency: 10000
+double_q: true
+network_type: "cnn"  # 使用CNN网络
+
+# 训练参数
+total_timesteps: 10000000

@@ -1,0 +1,56 @@
+# PPO Configuration
+
+# Algorithm parameters
+algorithm: "ppo"
+gamma: 0.99  # Discount factor
+learning_rate: 0.0003  # Learning rate
+batch_size: 64  # Batch size for PPO update
+ppo_epochs: 10  # Number of epochs to optimize on the same data
+clip_ratio: 0.2  # PPO clip parameter
+gae_lambda: 0.95  # GAE lambda parameter
+entropy_coef: 0.01  # Entropy coefficient
+value_coef: 0.5  # Value loss coefficient
+max_grad_norm: 0.5  # Maximum gradient norm
+clip_value: true  # Whether to clip value function update
+
+# Rollout parameters
+rollout_steps: 2048  # Steps per rollout
+
+# Network parameters
+network_type: "shared"  # Network type: 'shared', 'separate'
+hidden_dims: [64, 64]  # Hidden layer dimensions
+
+# Environment parameters
+env_id: "LunarLander-v2"  # Environment ID
+seed: 0  # Random seed
+frame_stack: null  # Number of frames to stack
+frame_skip: null  # Number of frames to skip
+normalize_obs: true  # Whether to normalize observations
+clip_rewards: true  # Whether to clip rewards
+time_limit: null  # Maximum steps per episode
+monitor: true  # Whether to monitor episode statistics
+continuous_actions: false  # Whether actions are continuous
+
+# Continuous action parameters (for continuous environments)
+action_scale: 1.0  # Scale for continuous actions
+action_bias: 0.0  # Bias for continuous actions
+
+# Parallel environments parameters
+num_envs: 8  # Number of parallel environments
+async_envs: true  # Whether to use asynchronous environments
+
+# Training parameters
+total_timesteps: 1000000  # Total timesteps for training
+eval_frequency: 20000  # Steps between evaluations
+eval_episodes: 10  # Number of episodes for evaluation
+checkpoint_frequency: 50000  # Steps between checkpoints
+log_frequency: 2000  # Steps between logging
+
+# Logging parameters
+log_dir: "logs"  # Directory for logs
+experiment_name: "ppo_lunar"  # Experiment name
+use_tensorboard: true  # Whether to use TensorBoard
+use_wandb: false  # Whether to use Weights & Biases
+wandb_project: "deep_rl"  # Weights & Biases project name
+wandb_entity: null  # Weights & Biases entity
+verbose: true  # Whether to print logs to console

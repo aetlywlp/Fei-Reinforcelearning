@@ -1,0 +1,23 @@
+# 蒙特卡罗方法配置文件
+
+# 算法参数
+algorithm: "mc"
+gamma: 0.9  # 折扣因子
+mc_method: "every_visit"  # first_visit 或 every_visit
+epsilon: 0.1  # epsilon-greedy策略的epsilon值
+policy_type: "epsilon_greedy"  # 初始策略类型: random或epsilon_greedy
+num_episodes: 10000  # 训练情节数
+
+# 环境参数
+env_id: "FrozenLake-v1"  # 环境ID
+env_is_slippery: false  # FrozenLake环境是否湿滑
+seed: 0  # 随机种子
+
+# 评估参数
+eval_freq: 500  # 评估频率 (每多少个情节评估一次)
+eval_episodes: 10  # 每次评估的情节数
+
+# 可视化参数
+plot_value_function: true  # 是否绘制价值函数
+plot_policy: true  # 是否绘制策略
+plot_returns: true  # 是否绘制回报曲线

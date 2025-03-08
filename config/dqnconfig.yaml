@@ -1,0 +1,66 @@
+# DQN Configuration
+
+# Algorithm parameters
+algorithm: "dqn"
+gamma: 0.99  # Discount factor
+learning_rate: 0.0001  # Learning rate
+batch_size: 64  # Batch size
+buffer_size: 100000  # Replay buffer size
+learning_starts: 1000  # Steps before starting to learn
+target_update_frequency: 1000  # Steps between target network updates
+train_frequency: 4  # Steps between gradient updates
+epsilon_start: 1.0  # Initial exploration rate
+epsilon_min: 0.05  # Final exploration rate
+epsilon_decay: 0.995  # Exploration decay rate
+
+# Network parameters
+network_type: "mlp"  # Network type: 'mlp', 'cnn'
+hidden_dims: [256, 256]  # Hidden layer dimensions
+dueling: false  # Whether to use dueling architecture
+
+# Double DQN
+double_q: true  # Whether to use Double DQN
+
+# Prioritized Experience Replay
+prioritized_replay: false  # Whether to use prioritized replay
+prioritized_replay_alpha: 0.6  # Alpha parameter for prioritized replay
+prioritized_replay_beta: 0.4  # Initial beta parameter for prioritized replay
+prioritized_replay_beta_increment: 0.001  # Increment for beta parameter
+
+# N-step returns
+n_step: 1  # Number of steps for n-step returns
+
+# Noisy Networks
+noisy_nets: false  # Whether to use noisy networks
+
+# Categorical DQN (C51)
+categorical: false  # Whether to use categorical DQN
+v_min: -10.0  # Minimum value for categorical DQN
+v_max: 10.0  # Maximum value for categorical DQN
+n_atoms: 51  # Number of atoms for categorical DQN
+
+# Environment parameters
+env_id: "CartPole-v1"  # Environment ID
+seed: 0  # Random seed
+frame_stack: null  # Number of frames to stack
+frame_skip: null  # Number of frames to skip
+normalize_obs: false  # Whether to normalize observations
+clip_rewards: false  # Whether to clip rewards
+time_limit: null  # Maximum steps per episode
+monitor: true  # Whether to monitor episode statistics
+
+# Training parameters
+total_timesteps: 100000  # Total timesteps for training
+eval_frequency: 10000  # Steps between evaluations
+eval_episodes: 10  # Number of episodes for evaluation
+checkpoint_frequency: 10000  # Steps between checkpoints
+log_frequency: 1000  # Steps between logging
+
+# Logging parameters
+log_dir: "logs"  # Directory for logs
+experiment_name: "dqn_cartpole"  # Experiment name
+use_tensorboard: true  # Whether to use TensorBoard
+use_wandb: false  # Whether to use Weights & Biases
+wandb_project: "deep_rl"  # Weights & Biases project name
+wandb_entity: null  # Weights & Biases entity
+verbose: true  # Whether to print logs to console

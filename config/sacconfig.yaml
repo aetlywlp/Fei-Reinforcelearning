@@ -1,0 +1,47 @@
+# SAC Configuration
+
+# Algorithm parameters
+algorithm: "sac"
+gamma: 0.99  # Discount factor
+lr_actor: 0.0003  # Actor learning rate
+lr_critic: 0.0003  # Critic learning rate
+batch_size: 256  # Batch size
+buffer_size: 1000000  # Replay buffer size
+learning_starts: 10000  # Steps before starting to learn
+tau: 0.005  # Soft update coefficient
+policy_update_freq: 2  # Policy update frequency
+
+# Entropy parameters
+auto_entropy_tuning: true  # Whether to automatically tune entropy
+alpha: 0.2  # Initial entropy coefficient (if auto_entropy_tuning is false)
+
+# Network parameters
+hidden_dims: [256, 256]  # Hidden layer dimensions
+
+# Action scaling parameters
+action_scale: 1.0  # Scale for actions
+action_bias: 0.0  # Bias for actions
+
+# Environment parameters
+env_id: "HalfCheetah-v4"  # Environment ID
+seed: 0  # Random seed
+normalize_obs: true  # Whether to normalize observations
+clip_rewards: false  # Whether to clip rewards
+time_limit: null  # Maximum steps per episode
+monitor: true  # Whether to monitor episode statistics
+
+# Training parameters
+total_timesteps: 1000000  # Total timesteps for training
+eval_frequency: 20000  # Steps between evaluations
+eval_episodes: 10  # Number of episodes for evaluation
+checkpoint_frequency: 50000  # Steps between checkpoints
+log_frequency: 2000  # Steps between logging
+
+# Logging parameters
+log_dir: "logs"  # Directory for logs
+experiment_name: "sac_halfcheetah"  # Experiment name
+use_tensorboard: true  # Whether to use TensorBoard
+use_wandb: false  # Whether to use Weights & Biases
+wandb_project: "deep_rl"  # Weights & Biases project name
+wandb_entity: null  # Weights & Biases entity
+verbose: true  # Whether to print logs to console

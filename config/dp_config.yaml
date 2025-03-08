@@ -1,0 +1,18 @@
+# 动态规划配置文件
+
+# 算法参数
+algorithm: "dp"
+gamma: 0.9  # 折扣因子
+theta: 1e-6  # 收敛阈值
+max_iterations: 1000  # 最大迭代次数
+policy_type: "random"  # 初始策略类型: random或deterministic
+dp_method: "policy_iteration"  # 动态规划方法: policy_evaluation, policy_iteration, value_iteration
+
+# 环境参数
+env_id: "FrozenLake-v1"  # 环境ID
+env_is_slippery: false  # FrozenLake环境是否湿滑
+seed: 0  # 随机种子
+
+# 可视化参数
+plot_value_function: true  # 是否绘制价值函数
+plot_policy: true  # 是否绘制策略
