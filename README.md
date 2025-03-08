@@ -80,5 +80,10 @@ PY_PROJECT/
 - 创建智能体类：继承BaseAgent并实现算法逻辑
 - 创建配置文件：定义算法超参数
 - 创建运行脚本：设置训练和评估流程
-
+### Very important learning materials
+- [openai spiningup](https://spinningup.qiwihui.com/zh-cn/latest/user/introduction.html):It includes some relatively cutting-edge papers, but the foundation is insufficient.
+- [openai_Gymnasium](https://gymnasium.farama.org/):A user-friendly framework,Especially the Gymnasium tutorial.
+- [reinforcement-learning](https://github.com/dennybritz/reinforcement-learning)：The classic introductory algorithms are implemented, which are basic and solid, but it requires rewriting Gym and TensorFlow.
+- [cleanrl](https://github.com/vwxyzjn/cleanrl):Minimal implementation, emphasizing code transparency and single-file reproducibility. All algorithms are implemented as independent scripts without abstraction layers.
+- [stable-baseline3](https://github.com/DLR-RM/stable-baselines3):Stable, modular industrial-grade implementation with high encapsulation, providing a unified API and modular components.
 
