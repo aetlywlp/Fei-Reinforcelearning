@@ -20,49 +20,29 @@ By using it ,I can trian a Inverted Pendulum.
 ### [reinforcement_learning_by_dennybritz](https://github.com/dennybritz/reinforcement-learning)
 Next, I will study, transplant, and organize Denny Britz's code according to the following format.
 ```
-reinforcement-learning-project/
-│
-├── config/                       # 配置文件目录
-│   ├── default_config.yaml       # 默认配置
-│   └── custom_configs/           # 自定义配置
-│       ├── cartpole_config.yaml
-│       └── lunarlander_config.yaml
-│
-├── src/                          # 源代码目录
-│   ├── agents/                   # 智能体实现
-│   │   ├── __init__.py
-│   │   ├── base_agent.py         # 基础智能体类
-│   │   ├── dqn_agent.py          # DQN智能体
-│   │   └── ppo_agent.py          # PPO智能体
-│   │
-│   ├── models/                   # 神经网络模型
-│   │   ├── __init__.py
-│   │   ├── dqn_network.py        # DQN网络结构
-│   │   └── policy_network.py     # 策略网络结构
-│   │
-│   ├── utils/                    # 工具函数
-│   │   ├── __init__.py
-│   │   ├── replay_buffer.py      # 经验回放缓冲区
-│   │   ├── logger.py             # 日志工具
-│   │   └── visualization.py      # 可视化工具
-│   │
-│   ├── train.py                  # 训练脚本
-│   └── evaluate.py               # 评估脚本
-│
-├── notebooks/                    # Jupyter笔记本
-│   ├── exploration.ipynb         # 环境探索
-│   └── results_analysis.ipynb    # 结果分析
-│
-├── results/                      # 结果目录
-│   └── <env_id>_<timestamp>/     # 特定训练运行的结果
-│       ├── checkpoints/          # 模型检查点
-│       ├── logs/                 # 日志文件
-│       └── plots/                # 图表和可视化
-│
-├── tests/                        # 测试目录
-│   ├── test_agents.py
-│   ├── test_models.py
-│   └── test_utils.py
+project/
+├── agents/                # 智能体实现
+│   ├── base_agent.py      # 基类定义接口
+│   ├── dqn_agent.py       # DQN实现
+│   └── ppo_agent.py       # PPO实现
+├── networks/              # 神经网络模型
+│   ├── mlp.py             # 多层感知器
+│   ├── cnn.py             # 卷积网络
+│   └── policy_nets.py     # 策略网络
+├── memory/                # 经验回放
+│   ├── replay_buffer.py   # 基本回放缓冲区
+│   └── prioritized_replay.py # 优先级回放
+├── environments/          # 环境封装
+│   ├── env_wrappers.py    # 环境预处理
+│   └── env_utils.py       # 辅助函数
+├── utils/                 # 工具函数
+│   ├── logger.py          # 日志工具
+│   ├── plot_utils.py      # 绘图函数
+│   └── misc.py            # 其他工具
+├── config/                # 配置文件
+│   ├── dqn_config.yaml    # DQN超参数
+│   └── ppo_config.yaml    # PPO超参数
+└── train.py               # 训练入口脚本
 │
 ├── requirements.txt              # 项目依赖
 ├── setup.py                      # 安装脚本
