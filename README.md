@@ -20,7 +20,7 @@ By using it ,I can trian a Inverted Pendulum.
 ### [reinforcement_learning_by_dennybritz](https://github.com/dennybritz/reinforcement-learning)
 Next, I will study, transplant, and organize Denny Britz's code according to the following format.
 ```
-project/
+PY_PROJECT/
 ├── agents/                # 智能体实现
 │   ├── base_agent.py      # 基类定义接口
 │   ├── dqn_agent.py       # DQN实现
